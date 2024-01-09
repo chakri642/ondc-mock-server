@@ -1,0 +1,17 @@
+context:
+    country: IND
+    bpp_uri: ++bpp_uri++
+    domain: ONDC:TRV10
+    timestamp: ++timestamp++
+    bap_id: https://api.beckn.juspay.in/pilot/bap/cab/v1
+    bpp_id: >-
+      https://api.beckn.juspay.in/dobpp/beckn/7f7896dd-787e-4a0b-8675-e9e6fe93bb8f
+    message_id: ++msg_id++
+    city: ++city_code++
+    core_version: 1.0.0
+    action: on_rating
+    bap_uri: ++bap_uri++
+    transaction_id: ++txn_id++
+message:
+    feedback_ack: true
+    rating_ack: true

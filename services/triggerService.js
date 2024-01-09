@@ -15,7 +15,7 @@ const trigger = (context, config, data) => {
     logger.info("Inside trigger service");
     setTimeout(() => {
       axios
-        .post(`${uri + api}`, data)
+        .post(`http://localhost:5500/${api}`, data)
         .then((response) => {
           logger.info(
             `Triggered ${api} response at ${uri}${api}`

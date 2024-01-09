@@ -1,0 +1,7 @@
+default:
+  callback: init
+  uri:
+    $ref: "./operations/req_body.yaml#/bap_uri"
+  delay: 300
+  payload:
+    $ref: "./template/init.yaml"

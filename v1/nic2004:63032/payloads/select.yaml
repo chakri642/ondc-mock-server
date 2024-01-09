@@ -1,0 +1,26 @@
+context:
+    country: IND
+    bpp_uri: ++bpp_uri++
+    domain: ONDCTRV10
+    timestamp: ++timestamp++
+    bap_id: https://example-bap.com
+    transaction_id: ++txn_id++
+    bpp_id: https://example-bpp.com
+    message_id: ++msg_id++
+    city: ++city_code++
+    core_version: 1.0.0
+    action: select
+    bap_uri: ++bap_uri++
+    max_callbacks: 3
+    ttl: P120S
+message:
+    order:
+      items:
+        - id: 5777a0bf-9a08-49aa-a97d-1e5561a9622e
+      fulfillment:
+        start:
+          location:
+            gps: 12.910458, 77.543089
+        end:
+          location:
+            gps: 12.9535139, 77.5710434

@@ -1,0 +1,17 @@
+context:
+    country: IND
+    bpp_uri: ++bpp_uri++
+    domain: ONDC:TRV10
+    timestamp: ++timestamp++
+    bap_id: https://example-bap.com
+    transaction_id: ++txn_id++
+    bpp_id: https://example-bpp.com
+    message_id: ++msg_id++
+    city: ++city_code++
+    core_version: 1.0.0
+    action: rating
+    bap_uri: ++bap_uri++
+message:
+    id: b0462745-f6c9-4100-bbe7-4fa3648b6b40
+    rating_category: DRIVER
+    value: 4

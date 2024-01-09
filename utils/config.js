@@ -7,7 +7,7 @@ const $RefParser = require("json-schema-ref-parser");
 var config;
 
 async function loadConfig(filePath) {
-  // const filePath = "./config.yaml";
+  console.log("Loading config from " + (filePath));
   const yamlString = fs.readFileSync(filePath, "utf8");
   const yamlObject = yaml.parse(yamlString);
   // config = yamlObject;

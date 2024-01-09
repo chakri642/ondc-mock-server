@@ -1,0 +1,15 @@
+context:
+    country: IND
+    bpp_uri: ++bpp_uri++
+    domain: ONDC:TRV10
+    timestamp: ++timestamp++
+    bap_id: https://example-bap.com
+    bpp_id: https://example-bpp.com
+    message_id: ++msg_id++
+    transaction_id: ++txn_id++
+    city: ++city_code++
+    core_version: 1.0.0
+    action: track
+    bap_uri: ++bap_uri++
+message:
+    order_id: 22e090fc-b8b1-4437-9126-ff7a71c7845c

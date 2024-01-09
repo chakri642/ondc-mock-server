@@ -1,0 +1,17 @@
+context:
+    country: IND
+    bpp_uri: ++bpp_uri++
+    domain: ONDC:TRV10
+    timestamp: ++timestamp++
+    bap_id: https://example-bap.com
+    bpp_id: https://example-bpp.com
+    message_id: ++msg_id++
+    city: ++city_code++
+    core_version: 1.0.0
+    action: on_support
+    bap_uri: ++bap_uri++
+    transaction_id: ++txn_id++
+message:
+    phone: '+918068870525'
+    email: support@nammayatri.in
+    url: https://support.nammayatri.com/gethelp

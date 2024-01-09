@@ -1,0 +1,15 @@
+context:
+    country: IND
+    bpp_uri: ++bpp_uri++
+    domain: ONDC:TRV10
+    timestamp: ++timestamp++
+    bap_id: https://example-bap.com
+    bpp_id: https://example-bpp.com
+    message_id: ++msg_id++
+    transaction_id: ++txn_id++
+    city: ++city_code++
+    core_version: 1.0.0
+    action: support
+    bap_uri: ++bap_uri++
+message:
+    ref_id: 7751bd26-3fdc-47ca-9b64-e998dc5abe68

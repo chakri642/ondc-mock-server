@@ -1,7 +1,7 @@
 const express = require("express");
 const log = require("./utils/logger");
 const app = express();
-var https = require('https');
+var http = require('http');
 const config = require("./utils/config.js");
 const router = require("./routes/route");
 
@@ -197,7 +197,7 @@ async function createCollectionItem(requestName, requestPayload, method) {
     name: `${requestName}`,
     request: {
       header: createRequestHeader(),
-      url: `https://localhost:5500/${requestName}`,
+      url: `http://localhost:5500/${requestName}`,
       method: method,
       body: {
         mode: "raw",
@@ -232,15 +232,18 @@ async function generatePostmanCollecion(postmanCollection, generateCollection) {
 
 var folderPath;
 async function createInstructionSet(file) {
+  console.log("createInstructionSet");
   try {
       if (args[0]) {
 
-      const path = args[0];
-      const file = `./${path}/${path}.yaml`;
+      // const path = args[0];
+      // const file = `./${path}/${path}.yaml`;
+      const file = `server.yaml`;
 
       startUp(file);
     }
     else{
+      console.log("build.yaml file not provided");
     const buildFile = await baseYMLFile(file);
     const examples = buildFile["x-examples"];
     const paths = buildFile["paths"];
@@ -332,7 +335,7 @@ async function startUp(file) {
   };
   app.use(express.json());
   const logger = log.init();
-  https.createServer(options, app).listen(server.port, () => {
+  http.createServer(options, app).listen(server.port, () => {
     logger.info(`This app is running on port number : ${server.port}`);
   });
   // app.listen(server.port, () => {

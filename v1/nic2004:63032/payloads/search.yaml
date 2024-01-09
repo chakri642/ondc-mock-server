@@ -1,0 +1,20 @@
+context:
+    country: IND
+    domain: ONDC:TRV10
+    timestamp: ++timestamp++
+    bap_id: https://example-test-bap.com
+    transaction_id: ++txn_id++
+    message_id: ++msg_id++
+    city: ++city_code++
+    core_version: 1.0.0
+    action: search
+    bap_uri: ++bap_uri++
+message:
+    intent:
+      fulfillment:
+        start:
+          location:
+            gps: 12.923608703179461, 77.61462964117527
+        end:
+          location:
+            gps: 12.9346302, 77.61533969999999

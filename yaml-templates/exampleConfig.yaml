@@ -1,7 +1,7 @@
 server:
   type: {{type}} 
   port: 5500 
-  sync_mode: true
+  sync_mode: false
 security:
   verify_sign: false
   lookup_uri: "http://localhost:3000/lookup"

@@ -1,0 +1,7 @@
+default:
+  callback: confirm
+  uri:
+    $ref: "./operations/req_body.yaml#/bap_uri"
+  delay: 300
+  payload:
+    $ref: "./template/confirm.yaml"

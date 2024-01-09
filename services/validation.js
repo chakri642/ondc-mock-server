@@ -25,6 +25,10 @@ const validateSchema = async (context) => {
   logger.info(
     `Inside schema validation service for ${context?.req_body?.context?.action} api`
   );
+
+  // logger.info(`req body ${JSON.stringify(context.req_body)}`);
+  // logger.info(`schema ${JSON.stringify(context.apiConfig.schema)}`);
+
   try {
     const validate = ajv.compile(context.apiConfig.schema);
     const valid = validate(context.req_body);
@@ -52,6 +56,7 @@ const validateRequest = async (
 ) => {
   logger = log.init();
   if (isFormFound ||  await validateSchema(context)) {
+    logger.info("Request validation : SUCCESS");
     //triggering the subsequent request
     payloadConfig = callbackConfig?.payload;
     if (payloadConfig != null) {

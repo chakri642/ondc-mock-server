@@ -1,7 +1,7 @@
 server:
   type: BPP 
   port: 5500 
-  sync_mode: true
+  sync_mode: false
 security:
   verify_sign: false
   lookup_uri: "http://localhost:3000/lookup"
@@ -23,67 +23,67 @@ path:
         payload:
           template:
             data:
-              $ref: "./on_demand/search.yaml"
+              $ref: "./v1/search.yaml"
   search:
     schema:
       $ref: "./schema/search.json"
     callbacks:
-      $ref: "./on_demand/search.yaml"
+      $ref: "./v1/search.yaml"
   select:
     schema:
       $ref: "./schema/select.json"
     callbacks:
-      $ref: "./on_demand/select.yaml"
+      $ref: "./v1/select.yaml"
   init:
     schema:
       $ref: "./schema/init.json"
     callbacks:
-      $ref: "./on_demand/init.yaml"
+      $ref: "./v1/init.yaml"
   confirm:
     schema:
       $ref: "./schema/confirm.json"
     callbacks:
-      $ref: "./on_demand/confirm.yaml"
+      $ref: "./v1/confirm.yaml"
   status:
     schema:
       $ref: "./schema/status.json"
     callbacks:
-      $ref: "./on_demand/status.yaml"
+      $ref: "./v1/status.yaml"
   update:
     schema:
       $ref: "./schema/update.json"
     callbacks:
-      $ref: "./on_demand/update.yaml"
+      $ref: "./v1/update.yaml"
   support:
     schema:
       $ref: "./schema/support.json"
     callbacks:
-      $ref: "./on_demand/support.yaml"
+      $ref: "./v1/support.yaml"
   track:
     schema:
       $ref: "./schema/track.json"
     callbacks:
-      $ref: "./on_demand/track.yaml"
+      $ref: "./v1/track.yaml"
   rating:
     schema:
       $ref: "./schema/rating.json"
     callbacks:
-      $ref: "./on_demand/rating.yaml"
+      $ref: "./v1/rating.yaml"
   on_search:
     schema:
       $ref: "./schema/on_search.json"
     callbacks:
-      $ref: "./on_demand/on_search.yaml"
+      $ref: "./v1/on_search.yaml"
   on_select:
     schema:
       $ref: "./schema/on_select.json"
     callbacks:
-      $ref: "./on_demand/on_select.yaml"
+      $ref: "./v1/on_select.yaml"
   on_init:
     schema:
       $ref: "./schema/on_init.json"
     callbacks:
-      $ref: "./on_demand/on_init.yaml"
+      $ref: "./v1/on_init.yaml"
   on_confirm:
     schema:
       $ref: "./schema/on_confirm.json"
