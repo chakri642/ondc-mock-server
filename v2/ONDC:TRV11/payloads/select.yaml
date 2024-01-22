@@ -1,0 +1,75 @@
+context:
+  domain: '{{domain}}'
+  location:
+    city:
+      code: std:080
+    country:
+      code: IND
+  action: select
+  version: 2.0.1
+  bap_id: buyerapp.com
+  bap_uri: '{{bap_uri}}'
+  bpp_id: sellerapp.com
+  bpp_uri: '{{bpp_uri}}'
+  transaction_id: '{{transaction_id}}'
+  message_id: '{{msg_id}}'
+  timestamp: '2023-01-08T22:00:30.000Z'
+  ttl: PT30S
+message:
+  order:
+    provider:
+      id: P1
+      locations:
+        - id: L1
+      ttl: P1D
+    items:
+      - id: I1
+        location_ids:
+          - L1
+        quantity:
+          selected:
+            count: 200
+        tags:
+          - descriptor:
+              code: BUYER_TERMS
+            list:
+              - descriptor:
+                  code: ITEM_REQ
+                value: free text on Item Customization
+              - descriptor:
+                  code: PACKAGING_REQ
+                value: free text on packaging Customization
+    fulfillments:
+      - stops:
+          - type: end
+            location:
+              gps: 1.3806217468119772, 103.74636438437074
+              area_code: '680230'
+        customer:
+          person:
+            creds:
+              - id: ESG-12345678
+                type: License
+                url: http://abcd.dnb.com/verify?id=ESG-12345678
+        tags:
+          - descriptor:
+              code: DELIVERY_TERMS
+            list:
+              - descriptor:
+                  code: INCOTERMS
+                value: CIF
+              - descriptor:
+                  code: DELIVERY_DUTY
+                value: DDP
+    payments:
+      - type: ON-FULFILLMENT
+    tags:
+      - descriptor:
+          code: buyer_id
+        list:
+          - descriptor:
+              code: buyer_id_code
+            value: gst
+          - descriptor:
+              code: buyer_id_no
+            value: xxxxxxxxxxxxxxx

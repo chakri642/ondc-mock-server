@@ -1,0 +1,54 @@
+context:
+  location:
+    country:
+      code: IND
+    city:
+      code: std:044
+  domain: '{{domain}}'
+  timestamp: '2024-01-18T15:12:25.008Z'
+  bap_id: staging-operator.paytm.com/preprod/OndcMetro/on_callback
+  bap_uri: '{{bap_uri}}'
+  transaction_id: '{{transaction_id}}'
+  message_id: '{{msg_id}}'
+  version: '2.0.0'
+  action: search
+  ttl: PT30S
+message:
+  order:
+    items:
+      - id: sjt-annanagareast-ashoknagar
+        quantity:
+          selected:
+            count: 1
+    provider:
+      id: 356abf8c-dbbc-4f48-8ed6-d0ebce1cb82a
+    billing:
+      name: N/A
+      email: ''
+      phone: '9971901764'
+    payments:
+      - collected_by: BAP
+        status: NOT-PAID
+        type: PRE-ORDER
+        params: {}
+        tags:
+          - descriptor:
+              code: BUYER_FINDER_FEES
+            display: false
+            list:
+              - descriptor:
+                  code: BUYER_FINDER_FEES_PERCENTAGE
+                value: '0'
+          - descriptor:
+              code: SETTLEMENT_TERMS
+            display: false
+            list:
+              - descriptor:
+                  code: SETTLEMENT_AMOUNT
+                value: '24'
+              - descriptor:
+                  code: DELAY_INTEREST
+                value: '0'
+              - descriptor:
+                  code: STATIC_TERMS
+                value: https://api.example-bap.com/booking/terms

@@ -54,8 +54,11 @@ const onRequest = async (req, res) => {
   
   console.log(`version ${JSON.stringify(req.body.context.version)}`);
 
+  console.log(`core_version ${JSON.stringify(req.body)}`);
+
   try {
-    if (req.body.context.version == "2.0.1") {
+    if (req.body.context.version == "2.0.1" || req.body.context.version == "2.0.0") {
+      req.body.context.domain = "ONDC:TRV11";
       const file = `./v2/${req.body.context.domain}/v2.yaml`;
       console.log("file xyz" + file);
       await config.loadConfig(file);

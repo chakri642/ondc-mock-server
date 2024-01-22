@@ -1,0 +1,48 @@
+context:
+  location:
+    country:
+      code: IND
+    city:
+      code: std:044
+  domain: '{{domain}}'
+  timestamp: '2024-01-18T15:12:25.008Z'
+  bap_id: staging-operator.paytm.com/preprod/OndcMetro/on_callback
+  bap_uri: '{{bap_uri}}'
+  transaction_id: '{{transaction_id}}'
+  message_id: '{{msg_id}}'
+  version: '2.0.0'
+  action: search
+  ttl: PT30S
+message:
+  intent:
+    fulfillment:
+      stops:
+        - type: START
+          location:
+            descriptor:
+              code: SAE|0213
+        - type: END
+          location:
+            descriptor:
+              code: SAN|0227
+      vehicle:
+        category: METRO
+    payment:
+      tags:
+        - descriptor:
+            code: BUYER_FINDER_FEES
+          display: false
+          list:
+            - descriptor:
+                code: BUYER_FINDER_FEES_PERCENTAGE
+              value: '0'
+        - descriptor:
+            code: SETTLEMENT_TERMS
+          display: false
+          list:
+            - descriptor:
+                code: DELAY_INTEREST
+              value: '0'
+            - descriptor:
+                code: STATIC_TERMS
+              value: https://api.example-bap.com/booking/terms
