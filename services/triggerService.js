@@ -18,6 +18,7 @@ const trigger = (context, config, data) => {
   try {
     logger.info("Inside trigger service");
     setTimeout(() => {
+      console.log("response beforee" + JSON.stringify(data));
       axios
         .post(`${data.context.bap_uri}/${api}`, data
         // , {
@@ -27,7 +28,7 @@ const trigger = (context, config, data) => {
         // }
         )
         .then((response) => {
-          console.log("response " + JSON.stringify(data));
+         
           logger.info(
             `Triggered ${api} response at ${response}${api}`
           );

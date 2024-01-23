@@ -47,6 +47,7 @@ message:
               name: High Court
             gps: 13.087369, 80.285021
           type: END
+          parent_stop_id: '1'
         type: ROUTE
         vehicle:
           category: METRO
