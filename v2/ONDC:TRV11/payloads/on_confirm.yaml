@@ -4,25 +4,25 @@ context:
       code: IND
     city:
       code: std:044
-  domain: '{{domain}}'
-  timestamp: '2024-01-18T15:12:25.008Z'
+  domain: "{{domain}}"
+  timestamp: "{{timestamp}}"
   bap_id: localhost/beckn/cab/v1/da4e23a5-3ce6-4c37-8b9b-41377c3c1a52
-  bap_uri: '{{bap_uri}}'
-  transaction_id: '{{transaction_id}}'
-  message_id: '{{msg_id}}'
-  version: '2.0.0'
+  bap_uri: "{{bap_uri}}"
+  transaction_id: "{{transaction_id}}"
+  message_id: "{{msg_id}}"
+  version: "2.0.0"
   action: on_confirm
   ttl: PT30S
 message:
   order:
     billing:
       name: N/A
-      phone: '9971901764'
+      phone: "9971901764"
     cancellation_terms:
       - external_ref:
           mimetype: text/html
           url: https://chennaimetrorail.org/fare-table/
-    created_at: '2024-01-18T15:15:35.921622516Z'
+    created_at: "2024-01-25T15:15:35.921622516Z"
     fulfillments:
       - id: 99e1e5ce-8928-4a0c-b324-cc3e7db8ce06
         stops:
@@ -30,20 +30,20 @@ message:
               status: UNCLAIMED
               token: MEYCIQC2ByhILMzT+HRp3hHpkn2uMs2UA/oe61tG1bNiKkZy9wIhAJjNyx+lOwX2BzF278AzaX+tLBrkApyLsGFwti/vb4gy<FSP>303906,SAE,SAN,SJT,1,2024-01-18 15:15:35.26
               type: QR
-              valid_to: '2024-01-18T20:30:00Z'
-            id: '1'
+              valid_to: "2024-01-31T20:30:00Z"
+            id: "1"
             location:
               descriptor:
                 code: SAE|0213
                 name: Anna Nagar East
-              gps: '13.084794, 80.218660'
+              gps: "13.084794, 80.218660"
             type: START
-          - id: '2'
+          - id: "2"
             location:
               descriptor:
                 code: SAN|0227
                 name: Ashok Nagar
-              gps: '13.035534, 80.211140'
+              gps: "13.035534, 80.211140"
             type: END
         tags:
           - descriptor:
@@ -51,7 +51,7 @@ message:
             list:
               - descriptor:
                   code: NUMBER
-                value: '303906'
+                value: "303906"
         type: TRIP
         vehicle:
           category: METRO
@@ -67,7 +67,7 @@ message:
         id: sjt-annanagareast-ashoknagar
         price:
           currency: INR
-          value: '24'
+          value: "1"
         quantity:
           selected:
             count: 1
@@ -78,9 +78,9 @@ message:
       - collected_by: BAP
         id: c04ba3cd-d141-48b9-ab62-5767c49bd444
         params:
-          amount: '24'
+          amount: "1"
           currency: INR
-          transaction_id: '870e6b70-b642-11ee-8ccd-276340fda82e'
+          transaction_id: "870e6b70-b642-11ee-8ccd-276340fda82e"
         status: PAID
         tags:
           - descriptor:
@@ -88,7 +88,7 @@ message:
             list:
               - descriptor:
                   code: BUYER_FINDER_FEES_PERCENTAGE
-                value: '0'
+                value: "0"
           - descriptor:
               code: SETTLEMENT_DETAILS
             list:
@@ -103,13 +103,13 @@ message:
                     value: PT1D
                   - descriptor:
                       code: DELAY_INTEREST
-                    value: '0'
+                    value: "0"
                   - descriptor:
                       code: SETTLEMENT_BASIS
                     value: INVOICE_RECIEPT
                   - descriptor:
                       code: MANDATORY_ARBITRATION
-                    value: 'TRUE'
+                    value: "TRUE"
                   - descriptor:
                       code: COURT_JURISDICTION
                     value: Bengaluru
@@ -118,7 +118,7 @@ message:
                     value: https://yaary.in/Consumertnc
                   - descriptor:
                       code: SETTLEMENT_AMOUNT
-                    value: '24'
+                    value: "1"
         type: PRE-ORDER
     provider:
       descriptor:
@@ -126,25 +126,25 @@ message:
       id: 3e0e6a20-ec0f-4c0b-900f-3dadc356f450
       time:
         range:
-          end: '2023-09-14T23:30:00.000Z'
-          start: '2023-09-14T05:30:00.000Z'
+          end: "2023-09-14T23:30:00.000Z"
+          start: "2023-09-14T05:30:00.000Z"
     quote:
       breakup:
         - item:
             id: sjt-annanagareast-ashoknagar
             price:
               currency: INR
-              value: '24'
+              value: "1"
             quantity:
               selected:
                 count: 1
           price:
             currency: INR
-            value: '24'
+            value: "1"
           title: BASE_FARE
       price:
         currency: INR
-        value: '24'
+        value: "1"
     status: ACTIVE
     tags:
       - descriptor:
@@ -153,4 +153,4 @@ message:
           - descriptor:
               code: GTFS
             value: https://chennaimetrorail.org/time-table/
-    updated_at: '2024-01-18T15:15:35.921622516Z'
+    updated_at: "2024-01-25T15:15:35.921622516Z"
