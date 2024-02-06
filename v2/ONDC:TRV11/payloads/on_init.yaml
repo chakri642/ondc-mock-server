@@ -63,7 +63,9 @@ message:
     payments:
       - collected_by: BAP
         id: c04ba3cd-d141-48b9-ab62-5767c49bd444
-        params: {}
+        params:
+          bank_account_number: "xxx"
+          bank_code: "xxx"
         status: NOT-PAID
         tags:
           - descriptor:
